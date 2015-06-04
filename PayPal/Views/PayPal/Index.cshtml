@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm("ValidateCommand", "PayPal"))
+{
+    <div>
+        <table >
+            <tr>
+                <td>
+                    product Name:
+                </td>
+                <td>
+                    <input type="text" name="product" value="PayPal Demo test" readonly />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                   Total Price:
+                </td>
+                <td>
+                   <input type="text" name="totalPrice" value="200" readonly /> $
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <input type="submit" name="btnConfirm" value="Pay with Paypal" />
+                </td>
+            </tr>
+        </table>
+    </div>
+}
